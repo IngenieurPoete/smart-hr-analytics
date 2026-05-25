@@ -1,0 +1,31 @@
+# Data & ETL
+pandas==2.2.2
+numpy==1.26.4
+faker==24.0.0
+
+# Machine Learning
+scikit-learn==1.4.2
+mlflow==2.12.1
+
+# Data Quality
+great-expectations==0.18.12
+
+# API & Web
+fastapi==0.111.0
+uvicorn==0.29.0
+
+# RAG
+langchain==0.1.20
+langchain-community==0.0.38
+chromadb==0.4.24
+
+# Database
+pyodbc==5.1.0
+sqlalchemy==2.0.29
+
+# Tests
+pytest==8.1.1
+
+# Visualisation
+matplotlib==3.8.4
+seaborn==0.13.2
