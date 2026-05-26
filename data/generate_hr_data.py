@@ -142,6 +142,87 @@ def save_datasets(output_dir: str = "data/raw") -> None:
     print(f"  ✓ absences.csv  — {len(absences)} absences générées")
 
     print(f"\nDatasets disponibles dans : {output_dir}/")
+    pay_gen = PayrollGenerator(employees=employees)
+    payroll = pay_gen.generate()
+    payroll.to_csv(f"{output_dir}/payroll.csv", index=False)
+    print(f"  ✓ payroll.csv       — {len(payroll)} lignes générées")
+
+    eval_gen = EvaluationGenerator(employees=employees)
+    evaluations = eval_gen.generate()
+    evaluations.to_csv(f"{output_dir}/evaluations.csv", index=False)
+    print(f"  ✓ evaluations.csv   — {len(evaluations)} lignes générées")
+    
+class PayrollGenerator:
+    """
+    Génère un historique de paie mensuelle sur 24 mois.
+    Chaque employé a une ligne par mois.
+    """
+
+    def __init__(self, employees: pd.DataFrame):
+        self.employees = employees
+
+    def generate(self) -> pd.DataFrame:
+        today = date.today()
+        records = []
+
+        for _, emp in self.employees.iterrows():
+            for mois_offset in range(24):
+                mois = today.replace(day=1) - timedelta(days=mois_offset * 30)
+
+                # Variation salariale légère chaque mois (primes, heures sup)
+                variation = random.uniform(0.95, 1.10)
+                salaire_mois = round(emp["salaire_mad"] * variation)
+
+                records.append({
+                    "payroll_id":    len(records) + 1,
+                    "employee_id":   emp["employee_id"],
+                    "departement":   emp["departement"],
+                    "poste":         emp["poste"],
+                    "mois":          mois.strftime("%Y-%m"),
+                    "salaire_base":  emp["salaire_mad"],
+                    "salaire_verse": salaire_mois,
+                    "prime":         round(salaire_mois - emp["salaire_mad"], 2),
+                })
+
+        return pd.DataFrame(records)
+
+
+class EvaluationGenerator:
+    """
+    Génère des évaluations annuelles pour chaque employé.
+    Score de 1 à 5, avec commentaire sur la performance.
+    """
+
+    def __init__(self, employees: pd.DataFrame):
+        self.employees = employees
+
+    def generate(self) -> pd.DataFrame:
+        today = date.today()
+        niveaux = {
+            1: "Insuffisant",
+            2: "À améliorer",
+            3: "Satisfaisant",
+            4: "Bien",
+            5: "Excellent"
+        }
+        records = []
+
+        for _, emp in self.employees.iterrows():
+            for annee_offset in range(2):  # 2 années d'évaluations
+                annee = today.year - annee_offset
+                score = int(np.random.choice([1,2,3,4,5], p=[0.05,0.15,0.35,0.30,0.15]))
+
+                records.append({
+                    "eval_id":      len(records) + 1,
+                    "employee_id":  emp["employee_id"],
+                    "departement":  emp["departement"],
+                    "annee":        annee,
+                    "score":        score,
+                    "mention":      niveaux[score],
+                    "recommande_promotion": 1 if score >= 4 else 0,
+                })
+
+        return pd.DataFrame(records)
 
 
 if __name__ == "__main__":

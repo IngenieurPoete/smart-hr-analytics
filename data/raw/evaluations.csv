@@ -1,0 +1,401 @@
+eval_id,employee_id,departement,annee,score,mention,recommande_promotion
+1,EMP0001,Juridique & Conformité,2026,5,Excellent,1
+2,EMP0001,Juridique & Conformité,2025,4,Bien,1
+3,EMP0002,Juridique & Conformité,2026,3,Satisfaisant,0
+4,EMP0002,Juridique & Conformité,2025,4,Bien,1
+5,EMP0003,Juridique & Conformité,2026,3,Satisfaisant,0
+6,EMP0003,Juridique & Conformité,2025,4,Bien,1
+7,EMP0004,Commercial,2026,5,Excellent,1
+8,EMP0004,Commercial,2025,3,Satisfaisant,0
+9,EMP0005,IT & Systèmes,2026,3,Satisfaisant,0
+10,EMP0005,IT & Systèmes,2025,3,Satisfaisant,0
+11,EMP0006,Commercial,2026,3,Satisfaisant,0
+12,EMP0006,Commercial,2025,2,À améliorer,0
+13,EMP0007,Direction Générale,2026,4,Bien,1
+14,EMP0007,Direction Générale,2025,4,Bien,1
+15,EMP0008,Commercial,2026,3,Satisfaisant,0
+16,EMP0008,Commercial,2025,5,Excellent,1
+17,EMP0009,Ressources Humaines,2026,4,Bien,1
+18,EMP0009,Ressources Humaines,2025,3,Satisfaisant,0
+19,EMP0010,IT & Systèmes,2026,3,Satisfaisant,0
+20,EMP0010,IT & Systèmes,2025,3,Satisfaisant,0
+21,EMP0011,IT & Systèmes,2026,3,Satisfaisant,0
+22,EMP0011,IT & Systèmes,2025,3,Satisfaisant,0
+23,EMP0012,Direction Générale,2026,4,Bien,1
+24,EMP0012,Direction Générale,2025,3,Satisfaisant,0
+25,EMP0013,Marketing,2026,1,Insuffisant,0
+26,EMP0013,Marketing,2025,3,Satisfaisant,0
+27,EMP0014,Ressources Humaines,2026,5,Excellent,1
+28,EMP0014,Ressources Humaines,2025,4,Bien,1
+29,EMP0015,Finance & Comptabilité,2026,3,Satisfaisant,0
+30,EMP0015,Finance & Comptabilité,2025,3,Satisfaisant,0
+31,EMP0016,Commercial,2026,4,Bien,1
+32,EMP0016,Commercial,2025,2,À améliorer,0
+33,EMP0017,Logistique,2026,3,Satisfaisant,0
+34,EMP0017,Logistique,2025,4,Bien,1
+35,EMP0018,Commercial,2026,4,Bien,1
+36,EMP0018,Commercial,2025,3,Satisfaisant,0
+37,EMP0019,Juridique & Conformité,2026,4,Bien,1
+38,EMP0019,Juridique & Conformité,2025,3,Satisfaisant,0
+39,EMP0020,Commercial,2026,1,Insuffisant,0
+40,EMP0020,Commercial,2025,3,Satisfaisant,0
+41,EMP0021,Finance & Comptabilité,2026,5,Excellent,1
+42,EMP0021,Finance & Comptabilité,2025,3,Satisfaisant,0
+43,EMP0022,Commercial,2026,3,Satisfaisant,0
+44,EMP0022,Commercial,2025,3,Satisfaisant,0
+45,EMP0023,Ressources Humaines,2026,2,À améliorer,0
+46,EMP0023,Ressources Humaines,2025,4,Bien,1
+47,EMP0024,Ressources Humaines,2026,3,Satisfaisant,0
+48,EMP0024,Ressources Humaines,2025,3,Satisfaisant,0
+49,EMP0025,IT & Systèmes,2026,4,Bien,1
+50,EMP0025,IT & Systèmes,2025,2,À améliorer,0
+51,EMP0026,Direction Générale,2026,5,Excellent,1
+52,EMP0026,Direction Générale,2025,3,Satisfaisant,0
+53,EMP0027,Marketing,2026,2,À améliorer,0
+54,EMP0027,Marketing,2025,2,À améliorer,0
+55,EMP0028,Logistique,2026,4,Bien,1
+56,EMP0028,Logistique,2025,3,Satisfaisant,0
+57,EMP0029,Juridique & Conformité,2026,4,Bien,1
+58,EMP0029,Juridique & Conformité,2025,4,Bien,1
+59,EMP0030,Commercial,2026,5,Excellent,1
+60,EMP0030,Commercial,2025,2,À améliorer,0
+61,EMP0031,Commercial,2026,4,Bien,1
+62,EMP0031,Commercial,2025,4,Bien,1
+63,EMP0032,Finance & Comptabilité,2026,2,À améliorer,0
+64,EMP0032,Finance & Comptabilité,2025,4,Bien,1
+65,EMP0033,Direction Générale,2026,3,Satisfaisant,0
+66,EMP0033,Direction Générale,2025,3,Satisfaisant,0
+67,EMP0034,Ressources Humaines,2026,3,Satisfaisant,0
+68,EMP0034,Ressources Humaines,2025,3,Satisfaisant,0
+69,EMP0035,Logistique,2026,4,Bien,1
+70,EMP0035,Logistique,2025,5,Excellent,1
+71,EMP0036,IT & Systèmes,2026,4,Bien,1
+72,EMP0036,IT & Systèmes,2025,3,Satisfaisant,0
+73,EMP0037,Ressources Humaines,2026,2,À améliorer,0
+74,EMP0037,Ressources Humaines,2025,2,À améliorer,0
+75,EMP0038,Juridique & Conformité,2026,4,Bien,1
+76,EMP0038,Juridique & Conformité,2025,5,Excellent,1
+77,EMP0039,Direction Générale,2026,3,Satisfaisant,0
+78,EMP0039,Direction Générale,2025,2,À améliorer,0
+79,EMP0040,Juridique & Conformité,2026,3,Satisfaisant,0
+80,EMP0040,Juridique & Conformité,2025,4,Bien,1
+81,EMP0041,Marketing,2026,4,Bien,1
+82,EMP0041,Marketing,2025,3,Satisfaisant,0
+83,EMP0042,IT & Systèmes,2026,3,Satisfaisant,0
+84,EMP0042,IT & Systèmes,2025,4,Bien,1
+85,EMP0043,Marketing,2026,3,Satisfaisant,0
+86,EMP0043,Marketing,2025,3,Satisfaisant,0
+87,EMP0044,Finance & Comptabilité,2026,4,Bien,1
+88,EMP0044,Finance & Comptabilité,2025,3,Satisfaisant,0
+89,EMP0045,Juridique & Conformité,2026,3,Satisfaisant,0
+90,EMP0045,Juridique & Conformité,2025,3,Satisfaisant,0
+91,EMP0046,Finance & Comptabilité,2026,5,Excellent,1
+92,EMP0046,Finance & Comptabilité,2025,3,Satisfaisant,0
+93,EMP0047,Commercial,2026,4,Bien,1
+94,EMP0047,Commercial,2025,3,Satisfaisant,0
+95,EMP0048,Marketing,2026,3,Satisfaisant,0
+96,EMP0048,Marketing,2025,3,Satisfaisant,0
+97,EMP0049,Direction Générale,2026,5,Excellent,1
+98,EMP0049,Direction Générale,2025,4,Bien,1
+99,EMP0050,Juridique & Conformité,2026,3,Satisfaisant,0
+100,EMP0050,Juridique & Conformité,2025,3,Satisfaisant,0
+101,EMP0051,Logistique,2026,4,Bien,1
+102,EMP0051,Logistique,2025,3,Satisfaisant,0
+103,EMP0052,IT & Systèmes,2026,5,Excellent,1
+104,EMP0052,IT & Systèmes,2025,3,Satisfaisant,0
+105,EMP0053,Ressources Humaines,2026,5,Excellent,1
+106,EMP0053,Ressources Humaines,2025,3,Satisfaisant,0
+107,EMP0054,Direction Générale,2026,4,Bien,1
+108,EMP0054,Direction Générale,2025,3,Satisfaisant,0
+109,EMP0055,Direction Générale,2026,2,À améliorer,0
+110,EMP0055,Direction Générale,2025,3,Satisfaisant,0
+111,EMP0056,Finance & Comptabilité,2026,3,Satisfaisant,0
+112,EMP0056,Finance & Comptabilité,2025,3,Satisfaisant,0
+113,EMP0057,Marketing,2026,4,Bien,1
+114,EMP0057,Marketing,2025,3,Satisfaisant,0
+115,EMP0058,Juridique & Conformité,2026,2,À améliorer,0
+116,EMP0058,Juridique & Conformité,2025,3,Satisfaisant,0
+117,EMP0059,Juridique & Conformité,2026,3,Satisfaisant,0
+118,EMP0059,Juridique & Conformité,2025,3,Satisfaisant,0
+119,EMP0060,Commercial,2026,1,Insuffisant,0
+120,EMP0060,Commercial,2025,2,À améliorer,0
+121,EMP0061,Commercial,2026,4,Bien,1
+122,EMP0061,Commercial,2025,3,Satisfaisant,0
+123,EMP0062,IT & Systèmes,2026,3,Satisfaisant,0
+124,EMP0062,IT & Systèmes,2025,1,Insuffisant,0
+125,EMP0063,Finance & Comptabilité,2026,3,Satisfaisant,0
+126,EMP0063,Finance & Comptabilité,2025,2,À améliorer,0
+127,EMP0064,Direction Générale,2026,3,Satisfaisant,0
+128,EMP0064,Direction Générale,2025,2,À améliorer,0
+129,EMP0065,Juridique & Conformité,2026,4,Bien,1
+130,EMP0065,Juridique & Conformité,2025,2,À améliorer,0
+131,EMP0066,Logistique,2026,2,À améliorer,0
+132,EMP0066,Logistique,2025,4,Bien,1
+133,EMP0067,Finance & Comptabilité,2026,4,Bien,1
+134,EMP0067,Finance & Comptabilité,2025,5,Excellent,1
+135,EMP0068,IT & Systèmes,2026,4,Bien,1
+136,EMP0068,IT & Systèmes,2025,4,Bien,1
+137,EMP0069,IT & Systèmes,2026,3,Satisfaisant,0
+138,EMP0069,IT & Systèmes,2025,4,Bien,1
+139,EMP0070,Finance & Comptabilité,2026,4,Bien,1
+140,EMP0070,Finance & Comptabilité,2025,2,À améliorer,0
+141,EMP0071,IT & Systèmes,2026,2,À améliorer,0
+142,EMP0071,IT & Systèmes,2025,4,Bien,1
+143,EMP0072,Finance & Comptabilité,2026,3,Satisfaisant,0
+144,EMP0072,Finance & Comptabilité,2025,3,Satisfaisant,0
+145,EMP0073,Ressources Humaines,2026,2,À améliorer,0
+146,EMP0073,Ressources Humaines,2025,3,Satisfaisant,0
+147,EMP0074,Finance & Comptabilité,2026,5,Excellent,1
+148,EMP0074,Finance & Comptabilité,2025,4,Bien,1
+149,EMP0075,Marketing,2026,3,Satisfaisant,0
+150,EMP0075,Marketing,2025,3,Satisfaisant,0
+151,EMP0076,Finance & Comptabilité,2026,3,Satisfaisant,0
+152,EMP0076,Finance & Comptabilité,2025,4,Bien,1
+153,EMP0077,IT & Systèmes,2026,2,À améliorer,0
+154,EMP0077,IT & Systèmes,2025,3,Satisfaisant,0
+155,EMP0078,Juridique & Conformité,2026,4,Bien,1
+156,EMP0078,Juridique & Conformité,2025,4,Bien,1
+157,EMP0079,Marketing,2026,5,Excellent,1
+158,EMP0079,Marketing,2025,3,Satisfaisant,0
+159,EMP0080,IT & Systèmes,2026,5,Excellent,1
+160,EMP0080,IT & Systèmes,2025,4,Bien,1
+161,EMP0081,Commercial,2026,1,Insuffisant,0
+162,EMP0081,Commercial,2025,4,Bien,1
+163,EMP0082,Commercial,2026,4,Bien,1
+164,EMP0082,Commercial,2025,1,Insuffisant,0
+165,EMP0083,Juridique & Conformité,2026,3,Satisfaisant,0
+166,EMP0083,Juridique & Conformité,2025,5,Excellent,1
+167,EMP0084,Juridique & Conformité,2026,5,Excellent,1
+168,EMP0084,Juridique & Conformité,2025,4,Bien,1
+169,EMP0085,Marketing,2026,4,Bien,1
+170,EMP0085,Marketing,2025,3,Satisfaisant,0
+171,EMP0086,Ressources Humaines,2026,3,Satisfaisant,0
+172,EMP0086,Ressources Humaines,2025,5,Excellent,1
+173,EMP0087,Juridique & Conformité,2026,4,Bien,1
+174,EMP0087,Juridique & Conformité,2025,1,Insuffisant,0
+175,EMP0088,Commercial,2026,2,À améliorer,0
+176,EMP0088,Commercial,2025,4,Bien,1
+177,EMP0089,Finance & Comptabilité,2026,3,Satisfaisant,0
+178,EMP0089,Finance & Comptabilité,2025,3,Satisfaisant,0
+179,EMP0090,IT & Systèmes,2026,3,Satisfaisant,0
+180,EMP0090,IT & Systèmes,2025,5,Excellent,1
+181,EMP0091,Commercial,2026,3,Satisfaisant,0
+182,EMP0091,Commercial,2025,3,Satisfaisant,0
+183,EMP0092,Commercial,2026,3,Satisfaisant,0
+184,EMP0092,Commercial,2025,2,À améliorer,0
+185,EMP0093,Ressources Humaines,2026,3,Satisfaisant,0
+186,EMP0093,Ressources Humaines,2025,4,Bien,1
+187,EMP0094,Marketing,2026,3,Satisfaisant,0
+188,EMP0094,Marketing,2025,4,Bien,1
+189,EMP0095,Marketing,2026,3,Satisfaisant,0
+190,EMP0095,Marketing,2025,4,Bien,1
+191,EMP0096,Direction Générale,2026,5,Excellent,1
+192,EMP0096,Direction Générale,2025,3,Satisfaisant,0
+193,EMP0097,Ressources Humaines,2026,5,Excellent,1
+194,EMP0097,Ressources Humaines,2025,4,Bien,1
+195,EMP0098,Finance & Comptabilité,2026,4,Bien,1
+196,EMP0098,Finance & Comptabilité,2025,3,Satisfaisant,0
+197,EMP0099,Marketing,2026,3,Satisfaisant,0
+198,EMP0099,Marketing,2025,5,Excellent,1
+199,EMP0100,IT & Systèmes,2026,5,Excellent,1
+200,EMP0100,IT & Systèmes,2025,4,Bien,1
+201,EMP0101,Juridique & Conformité,2026,3,Satisfaisant,0
+202,EMP0101,Juridique & Conformité,2025,2,À améliorer,0
+203,EMP0102,Ressources Humaines,2026,2,À améliorer,0
+204,EMP0102,Ressources Humaines,2025,3,Satisfaisant,0
+205,EMP0103,Juridique & Conformité,2026,3,Satisfaisant,0
+206,EMP0103,Juridique & Conformité,2025,5,Excellent,1
+207,EMP0104,Commercial,2026,3,Satisfaisant,0
+208,EMP0104,Commercial,2025,5,Excellent,1
+209,EMP0105,IT & Systèmes,2026,4,Bien,1
+210,EMP0105,IT & Systèmes,2025,3,Satisfaisant,0
+211,EMP0106,IT & Systèmes,2026,4,Bien,1
+212,EMP0106,IT & Systèmes,2025,5,Excellent,1
+213,EMP0107,Commercial,2026,4,Bien,1
+214,EMP0107,Commercial,2025,3,Satisfaisant,0
+215,EMP0108,Ressources Humaines,2026,3,Satisfaisant,0
+216,EMP0108,Ressources Humaines,2025,4,Bien,1
+217,EMP0109,Commercial,2026,5,Excellent,1
+218,EMP0109,Commercial,2025,3,Satisfaisant,0
+219,EMP0110,Juridique & Conformité,2026,4,Bien,1
+220,EMP0110,Juridique & Conformité,2025,2,À améliorer,0
+221,EMP0111,Direction Générale,2026,4,Bien,1
+222,EMP0111,Direction Générale,2025,4,Bien,1
+223,EMP0112,IT & Systèmes,2026,3,Satisfaisant,0
+224,EMP0112,IT & Systèmes,2025,4,Bien,1
+225,EMP0113,Logistique,2026,3,Satisfaisant,0
+226,EMP0113,Logistique,2025,3,Satisfaisant,0
+227,EMP0114,Logistique,2026,4,Bien,1
+228,EMP0114,Logistique,2025,2,À améliorer,0
+229,EMP0115,Juridique & Conformité,2026,2,À améliorer,0
+230,EMP0115,Juridique & Conformité,2025,4,Bien,1
+231,EMP0116,Finance & Comptabilité,2026,3,Satisfaisant,0
+232,EMP0116,Finance & Comptabilité,2025,3,Satisfaisant,0
+233,EMP0117,Marketing,2026,5,Excellent,1
+234,EMP0117,Marketing,2025,2,À améliorer,0
+235,EMP0118,Commercial,2026,4,Bien,1
+236,EMP0118,Commercial,2025,3,Satisfaisant,0
+237,EMP0119,Commercial,2026,1,Insuffisant,0
+238,EMP0119,Commercial,2025,2,À améliorer,0
+239,EMP0120,Finance & Comptabilité,2026,3,Satisfaisant,0
+240,EMP0120,Finance & Comptabilité,2025,3,Satisfaisant,0
+241,EMP0121,Finance & Comptabilité,2026,3,Satisfaisant,0
+242,EMP0121,Finance & Comptabilité,2025,4,Bien,1
+243,EMP0122,Juridique & Conformité,2026,4,Bien,1
+244,EMP0122,Juridique & Conformité,2025,3,Satisfaisant,0
+245,EMP0123,Juridique & Conformité,2026,3,Satisfaisant,0
+246,EMP0123,Juridique & Conformité,2025,4,Bien,1
+247,EMP0124,Finance & Comptabilité,2026,2,À améliorer,0
+248,EMP0124,Finance & Comptabilité,2025,4,Bien,1
+249,EMP0125,IT & Systèmes,2026,4,Bien,1
+250,EMP0125,IT & Systèmes,2025,5,Excellent,1
+251,EMP0126,Juridique & Conformité,2026,2,À améliorer,0
+252,EMP0126,Juridique & Conformité,2025,5,Excellent,1
+253,EMP0127,Direction Générale,2026,5,Excellent,1
+254,EMP0127,Direction Générale,2025,4,Bien,1
+255,EMP0128,Juridique & Conformité,2026,4,Bien,1
+256,EMP0128,Juridique & Conformité,2025,3,Satisfaisant,0
+257,EMP0129,Commercial,2026,5,Excellent,1
+258,EMP0129,Commercial,2025,4,Bien,1
+259,EMP0130,Juridique & Conformité,2026,3,Satisfaisant,0
+260,EMP0130,Juridique & Conformité,2025,1,Insuffisant,0
+261,EMP0131,IT & Systèmes,2026,2,À améliorer,0
+262,EMP0131,IT & Systèmes,2025,4,Bien,1
+263,EMP0132,Finance & Comptabilité,2026,5,Excellent,1
+264,EMP0132,Finance & Comptabilité,2025,2,À améliorer,0
+265,EMP0133,Commercial,2026,4,Bien,1
+266,EMP0133,Commercial,2025,3,Satisfaisant,0
+267,EMP0134,Juridique & Conformité,2026,4,Bien,1
+268,EMP0134,Juridique & Conformité,2025,4,Bien,1
+269,EMP0135,IT & Systèmes,2026,3,Satisfaisant,0
+270,EMP0135,IT & Systèmes,2025,2,À améliorer,0
+271,EMP0136,Direction Générale,2026,2,À améliorer,0
+272,EMP0136,Direction Générale,2025,5,Excellent,1
+273,EMP0137,Juridique & Conformité,2026,4,Bien,1
+274,EMP0137,Juridique & Conformité,2025,2,À améliorer,0
+275,EMP0138,IT & Systèmes,2026,2,À améliorer,0
+276,EMP0138,IT & Systèmes,2025,4,Bien,1
+277,EMP0139,Direction Générale,2026,3,Satisfaisant,0
+278,EMP0139,Direction Générale,2025,4,Bien,1
+279,EMP0140,Finance & Comptabilité,2026,4,Bien,1
+280,EMP0140,Finance & Comptabilité,2025,2,À améliorer,0
+281,EMP0141,Juridique & Conformité,2026,3,Satisfaisant,0
+282,EMP0141,Juridique & Conformité,2025,3,Satisfaisant,0
+283,EMP0142,Direction Générale,2026,3,Satisfaisant,0
+284,EMP0142,Direction Générale,2025,3,Satisfaisant,0
+285,EMP0143,Commercial,2026,5,Excellent,1
+286,EMP0143,Commercial,2025,5,Excellent,1
+287,EMP0144,Finance & Comptabilité,2026,3,Satisfaisant,0
+288,EMP0144,Finance & Comptabilité,2025,4,Bien,1
+289,EMP0145,Commercial,2026,3,Satisfaisant,0
+290,EMP0145,Commercial,2025,5,Excellent,1
+291,EMP0146,Logistique,2026,3,Satisfaisant,0
+292,EMP0146,Logistique,2025,4,Bien,1
+293,EMP0147,Ressources Humaines,2026,3,Satisfaisant,0
+294,EMP0147,Ressources Humaines,2025,2,À améliorer,0
+295,EMP0148,Juridique & Conformité,2026,2,À améliorer,0
+296,EMP0148,Juridique & Conformité,2025,5,Excellent,1
+297,EMP0149,Direction Générale,2026,4,Bien,1
+298,EMP0149,Direction Générale,2025,5,Excellent,1
+299,EMP0150,Ressources Humaines,2026,3,Satisfaisant,0
+300,EMP0150,Ressources Humaines,2025,3,Satisfaisant,0
+301,EMP0151,Ressources Humaines,2026,3,Satisfaisant,0
+302,EMP0151,Ressources Humaines,2025,2,À améliorer,0
+303,EMP0152,Direction Générale,2026,4,Bien,1
+304,EMP0152,Direction Générale,2025,3,Satisfaisant,0
+305,EMP0153,Finance & Comptabilité,2026,4,Bien,1
+306,EMP0153,Finance & Comptabilité,2025,3,Satisfaisant,0
+307,EMP0154,Juridique & Conformité,2026,5,Excellent,1
+308,EMP0154,Juridique & Conformité,2025,5,Excellent,1
+309,EMP0155,Logistique,2026,4,Bien,1
+310,EMP0155,Logistique,2025,4,Bien,1
+311,EMP0156,Commercial,2026,4,Bien,1
+312,EMP0156,Commercial,2025,5,Excellent,1
+313,EMP0157,IT & Systèmes,2026,5,Excellent,1
+314,EMP0157,IT & Systèmes,2025,3,Satisfaisant,0
+315,EMP0158,Commercial,2026,4,Bien,1
+316,EMP0158,Commercial,2025,4,Bien,1
+317,EMP0159,IT & Systèmes,2026,4,Bien,1
+318,EMP0159,IT & Systèmes,2025,1,Insuffisant,0
+319,EMP0160,Commercial,2026,4,Bien,1
+320,EMP0160,Commercial,2025,3,Satisfaisant,0
+321,EMP0161,Direction Générale,2026,4,Bien,1
+322,EMP0161,Direction Générale,2025,4,Bien,1
+323,EMP0162,Logistique,2026,2,À améliorer,0
+324,EMP0162,Logistique,2025,3,Satisfaisant,0
+325,EMP0163,Juridique & Conformité,2026,5,Excellent,1
+326,EMP0163,Juridique & Conformité,2025,3,Satisfaisant,0
+327,EMP0164,IT & Systèmes,2026,3,Satisfaisant,0
+328,EMP0164,IT & Systèmes,2025,3,Satisfaisant,0
+329,EMP0165,Juridique & Conformité,2026,2,À améliorer,0
+330,EMP0165,Juridique & Conformité,2025,2,À améliorer,0
+331,EMP0166,Juridique & Conformité,2026,2,À améliorer,0
+332,EMP0166,Juridique & Conformité,2025,2,À améliorer,0
+333,EMP0167,Juridique & Conformité,2026,1,Insuffisant,0
+334,EMP0167,Juridique & Conformité,2025,5,Excellent,1
+335,EMP0168,Marketing,2026,3,Satisfaisant,0
+336,EMP0168,Marketing,2025,3,Satisfaisant,0
+337,EMP0169,Finance & Comptabilité,2026,4,Bien,1
+338,EMP0169,Finance & Comptabilité,2025,5,Excellent,1
+339,EMP0170,Commercial,2026,4,Bien,1
+340,EMP0170,Commercial,2025,3,Satisfaisant,0
+341,EMP0171,Juridique & Conformité,2026,4,Bien,1
+342,EMP0171,Juridique & Conformité,2025,2,À améliorer,0
+343,EMP0172,Commercial,2026,5,Excellent,1
+344,EMP0172,Commercial,2025,4,Bien,1
+345,EMP0173,Juridique & Conformité,2026,5,Excellent,1
+346,EMP0173,Juridique & Conformité,2025,5,Excellent,1
+347,EMP0174,IT & Systèmes,2026,3,Satisfaisant,0
+348,EMP0174,IT & Systèmes,2025,5,Excellent,1
+349,EMP0175,Finance & Comptabilité,2026,4,Bien,1
+350,EMP0175,Finance & Comptabilité,2025,3,Satisfaisant,0
+351,EMP0176,Finance & Comptabilité,2026,4,Bien,1
+352,EMP0176,Finance & Comptabilité,2025,2,À améliorer,0
+353,EMP0177,Direction Générale,2026,3,Satisfaisant,0
+354,EMP0177,Direction Générale,2025,2,À améliorer,0
+355,EMP0178,Marketing,2026,3,Satisfaisant,0
+356,EMP0178,Marketing,2025,4,Bien,1
+357,EMP0179,Direction Générale,2026,4,Bien,1
+358,EMP0179,Direction Générale,2025,3,Satisfaisant,0
+359,EMP0180,Direction Générale,2026,2,À améliorer,0
+360,EMP0180,Direction Générale,2025,4,Bien,1
+361,EMP0181,Direction Générale,2026,2,À améliorer,0
+362,EMP0181,Direction Générale,2025,3,Satisfaisant,0
+363,EMP0182,Direction Générale,2026,4,Bien,1
+364,EMP0182,Direction Générale,2025,3,Satisfaisant,0
+365,EMP0183,Direction Générale,2026,5,Excellent,1
+366,EMP0183,Direction Générale,2025,4,Bien,1
+367,EMP0184,Logistique,2026,3,Satisfaisant,0
+368,EMP0184,Logistique,2025,2,À améliorer,0
+369,EMP0185,Finance & Comptabilité,2026,3,Satisfaisant,0
+370,EMP0185,Finance & Comptabilité,2025,2,À améliorer,0
+371,EMP0186,Direction Générale,2026,4,Bien,1
+372,EMP0186,Direction Générale,2025,2,À améliorer,0
+373,EMP0187,Juridique & Conformité,2026,5,Excellent,1
+374,EMP0187,Juridique & Conformité,2025,3,Satisfaisant,0
+375,EMP0188,Finance & Comptabilité,2026,1,Insuffisant,0
+376,EMP0188,Finance & Comptabilité,2025,4,Bien,1
+377,EMP0189,Finance & Comptabilité,2026,3,Satisfaisant,0
+378,EMP0189,Finance & Comptabilité,2025,4,Bien,1
+379,EMP0190,Ressources Humaines,2026,5,Excellent,1
+380,EMP0190,Ressources Humaines,2025,2,À améliorer,0
+381,EMP0191,Logistique,2026,1,Insuffisant,0
+382,EMP0191,Logistique,2025,2,À améliorer,0
+383,EMP0192,Direction Générale,2026,3,Satisfaisant,0
+384,EMP0192,Direction Générale,2025,3,Satisfaisant,0
+385,EMP0193,Commercial,2026,5,Excellent,1
+386,EMP0193,Commercial,2025,3,Satisfaisant,0
+387,EMP0194,IT & Systèmes,2026,5,Excellent,1
+388,EMP0194,IT & Systèmes,2025,2,À améliorer,0
+389,EMP0195,Marketing,2026,5,Excellent,1
+390,EMP0195,Marketing,2025,4,Bien,1
+391,EMP0196,Juridique & Conformité,2026,5,Excellent,1
+392,EMP0196,Juridique & Conformité,2025,5,Excellent,1
+393,EMP0197,Commercial,2026,5,Excellent,1
+394,EMP0197,Commercial,2025,2,À améliorer,0
+395,EMP0198,Logistique,2026,4,Bien,1
+396,EMP0198,Logistique,2025,3,Satisfaisant,0
+397,EMP0199,IT & Systèmes,2026,3,Satisfaisant,0
+398,EMP0199,IT & Systèmes,2025,3,Satisfaisant,0
+399,EMP0200,Logistique,2026,5,Excellent,1
+400,EMP0200,Logistique,2025,2,À améliorer,0
