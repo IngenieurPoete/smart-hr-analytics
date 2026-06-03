@@ -1,3 +1,4 @@
+import pathlib
 # ── Connexion SQL Server ──────────────────────────────────────────
 CONNECTION_STRING = (
     "DRIVER={ODBC Driver 17 for SQL Server};"
@@ -6,5 +7,7 @@ CONNECTION_STRING = (
     "Trusted_Connection=yes;"
 )
 
-# ── Chemins ───────────────────────────────────────────────────────
-DATA_RAW_DIR = "data/raw"
+# ── Répertoires ─────────────────────────────────────────────────────
+BASE_DIR = pathlib.Path(__file__).parent.parent
+#chemin absolu du dossier data/raw
+DATA_RAW_DIR = BASE_DIR / "data" / "raw"
