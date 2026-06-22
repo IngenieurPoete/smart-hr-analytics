@@ -1,0 +1,573 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1400,
+  "model": {
+    "culture": "fr-FR",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/INGABOU\\SQLEXPRESS;SmartHR_DW",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "INGABOU\\SQLEXPRESS",
+            "database": "SmartHR_DW"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "credential": {
+          "AuthenticationKind": "ServiceAccount",
+          "kind": "SQL",
+          "path": "ingabou\\sqlexpress;SmartHR_DW",
+          "EncryptConnection": false
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "gold Dim_Departement",
+        "columns": [
+          {
+            "name": "departement_sk",
+            "dataType": "int64",
+            "sourceColumn": "departement_sk"
+          },
+          {
+            "name": "nom_departement",
+            "dataType": "string",
+            "sourceColumn": "nom_departement"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/INGABOU\\SQLEXPRESS;SmartHR_DW\",",
+                "    gold_Dim_Departement = Source{[Schema=\"gold\",Item=\"Dim_Departement\"]}[Data]",
+                "in",
+                "    gold_Dim_Departement"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "gold Dim_Employe",
+        "columns": [
+          {
+            "name": "employe_sk",
+            "dataType": "int64",
+            "sourceColumn": "employe_sk"
+          },
+          {
+            "name": "employee_id",
+            "dataType": "string",
+            "sourceColumn": "employee_id"
+          },
+          {
+            "name": "nom",
+            "dataType": "string",
+            "sourceColumn": "nom"
+          },
+          {
+            "name": "genre",
+            "dataType": "string",
+            "sourceColumn": "genre"
+          },
+          {
+            "name": "contrat",
+            "dataType": "string",
+            "sourceColumn": "contrat"
+          },
+          {
+            "name": "date_embauche",
+            "dataType": "dateTime",
+            "sourceColumn": "date_embauche"
+          },
+          {
+            "name": "date_naissance",
+            "dataType": "dateTime",
+            "sourceColumn": "date_naissance"
+          },
+          {
+            "name": "anciennete_annees",
+            "dataType": "double",
+            "sourceColumn": "anciennete_annees"
+          },
+          {
+            "name": "actif",
+            "dataType": "boolean",
+            "sourceColumn": "actif"
+          },
+          {
+            "name": "departement_sk",
+            "dataType": "int64",
+            "sourceColumn": "departement_sk"
+          },
+          {
+            "name": "poste_sk",
+            "dataType": "int64",
+            "sourceColumn": "poste_sk"
+          },
+          {
+            "name": "ville_sk",
+            "dataType": "int64",
+            "sourceColumn": "ville_sk"
+          },
+          {
+            "name": "date_debut",
+            "dataType": "dateTime",
+            "sourceColumn": "date_debut"
+          },
+          {
+            "name": "date_fin",
+            "dataType": "dateTime",
+            "sourceColumn": "date_fin"
+          },
+          {
+            "name": "est_courant",
+            "dataType": "boolean",
+            "sourceColumn": "est_courant"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/INGABOU\\SQLEXPRESS;SmartHR_DW\",",
+                "    gold_Dim_Employe = Source{[Schema=\"gold\",Item=\"Dim_Employe\"]}[Data]",
+                "in",
+                "    gold_Dim_Employe"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "gold Dim_Poste",
+        "columns": [
+          {
+            "name": "poste_sk",
+            "dataType": "int64",
+            "sourceColumn": "poste_sk"
+          },
+          {
+            "name": "nom_poste",
+            "dataType": "string",
+            "sourceColumn": "nom_poste"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/INGABOU\\SQLEXPRESS;SmartHR_DW\",",
+                "    gold_Dim_Poste = Source{[Schema=\"gold\",Item=\"Dim_Poste\"]}[Data]",
+                "in",
+                "    gold_Dim_Poste"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "gold Dim_Temps",
+        "columns": [
+          {
+            "name": "temps_sk",
+            "dataType": "int64",
+            "sourceColumn": "temps_sk"
+          },
+          {
+            "name": "date_complete",
+            "dataType": "dateTime",
+            "sourceColumn": "date_complete"
+          },
+          {
+            "name": "jour",
+            "dataType": "int64",
+            "sourceColumn": "jour"
+          },
+          {
+            "name": "mois",
+            "dataType": "int64",
+            "sourceColumn": "mois"
+          },
+          {
+            "name": "nom_mois",
+            "dataType": "string",
+            "sourceColumn": "nom_mois"
+          },
+          {
+            "name": "trimestre",
+            "dataType": "int64",
+            "sourceColumn": "trimestre"
+          },
+          {
+            "name": "annee",
+            "dataType": "int64",
+            "sourceColumn": "annee"
+          },
+          {
+            "name": "semaine",
+            "dataType": "int64",
+            "sourceColumn": "semaine"
+          },
+          {
+            "name": "est_weekend",
+            "dataType": "boolean",
+            "sourceColumn": "est_weekend"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/INGABOU\\SQLEXPRESS;SmartHR_DW\",",
+                "    gold_Dim_Temps = Source{[Schema=\"gold\",Item=\"Dim_Temps\"]}[Data]",
+                "in",
+                "    gold_Dim_Temps"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "gold Dim_Ville",
+        "columns": [
+          {
+            "name": "ville_sk",
+            "dataType": "int64",
+            "sourceColumn": "ville_sk"
+          },
+          {
+            "name": "nom_ville",
+            "dataType": "string",
+            "sourceColumn": "nom_ville"
+          },
+          {
+            "name": "region",
+            "dataType": "string",
+            "sourceColumn": "region"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/INGABOU\\SQLEXPRESS;SmartHR_DW\",",
+                "    gold_Dim_Ville = Source{[Schema=\"gold\",Item=\"Dim_Ville\"]}[Data]",
+                "in",
+                "    gold_Dim_Ville"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "gold Fact_Absences",
+        "columns": [
+          {
+            "name": "absence_sk",
+            "dataType": "int64",
+            "sourceColumn": "absence_sk"
+          },
+          {
+            "name": "employe_sk",
+            "dataType": "int64",
+            "sourceColumn": "employe_sk"
+          },
+          {
+            "name": "temps_sk_debut",
+            "dataType": "int64",
+            "sourceColumn": "temps_sk_debut"
+          },
+          {
+            "name": "departement_sk",
+            "dataType": "int64",
+            "sourceColumn": "departement_sk"
+          },
+          {
+            "name": "motif",
+            "dataType": "string",
+            "sourceColumn": "motif"
+          },
+          {
+            "name": "nb_jours",
+            "dataType": "int64",
+            "sourceColumn": "nb_jours"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/INGABOU\\SQLEXPRESS;SmartHR_DW\",",
+                "    gold_Fact_Absences = Source{[Schema=\"gold\",Item=\"Fact_Absences\"]}[Data]",
+                "in",
+                "    gold_Fact_Absences"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Nb Absences",
+            "expression": "COUNTROWS('gold Fact_Absences')"
+          },
+          {
+            "name": "Total Jours Absence",
+            "expression": "SUM('gold Fact_Absences'[nb_jours])"
+          },
+          {
+            "name": "Taux Absenteisme %",
+            "expression": "DIVIDE([Total Jours Absence],220 * 200)",
+            "formatString": "0.00 %;-0.00 %;0.00 %"
+          },
+          {
+            "name": "Moy Jours Absence",
+            "expression": "AVERAGE('gold Fact_Absences'[nb_jours])"
+          }
+        ]
+      },
+      {
+        "name": "gold Fact_Evaluations",
+        "columns": [
+          {
+            "name": "eval_sk",
+            "dataType": "int64",
+            "sourceColumn": "eval_sk"
+          },
+          {
+            "name": "employe_sk",
+            "dataType": "int64",
+            "sourceColumn": "employe_sk"
+          },
+          {
+            "name": "departement_sk",
+            "dataType": "int64",
+            "sourceColumn": "departement_sk"
+          },
+          {
+            "name": "annee",
+            "dataType": "int64",
+            "sourceColumn": "annee"
+          },
+          {
+            "name": "score",
+            "dataType": "int64",
+            "sourceColumn": "score"
+          },
+          {
+            "name": "mention",
+            "dataType": "string",
+            "sourceColumn": "mention"
+          },
+          {
+            "name": "recommande_promotion",
+            "dataType": "boolean",
+            "sourceColumn": "recommande_promotion"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/INGABOU\\SQLEXPRESS;SmartHR_DW\",",
+                "    gold_Fact_Evaluations = Source{[Schema=\"gold\",Item=\"Fact_Evaluations\"]}[Data]",
+                "in",
+                "    gold_Fact_Evaluations"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "gold Fact_Paie",
+        "columns": [
+          {
+            "name": "paie_sk",
+            "dataType": "int64",
+            "sourceColumn": "paie_sk"
+          },
+          {
+            "name": "employe_sk",
+            "dataType": "int64",
+            "sourceColumn": "employe_sk"
+          },
+          {
+            "name": "temps_sk",
+            "dataType": "int64",
+            "sourceColumn": "temps_sk"
+          },
+          {
+            "name": "departement_sk",
+            "dataType": "int64",
+            "sourceColumn": "departement_sk"
+          },
+          {
+            "name": "poste_sk",
+            "dataType": "int64",
+            "sourceColumn": "poste_sk"
+          },
+          {
+            "name": "salaire_base",
+            "dataType": "double",
+            "sourceColumn": "salaire_base"
+          },
+          {
+            "name": "salaire_verse",
+            "dataType": "double",
+            "sourceColumn": "salaire_verse"
+          },
+          {
+            "name": "prime",
+            "dataType": "double",
+            "sourceColumn": "prime"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/INGABOU\\SQLEXPRESS;SmartHR_DW\",",
+                "    gold_Fact_Paie = Source{[Schema=\"gold\",Item=\"Fact_Paie\"]}[Data]",
+                "in",
+                "    gold_Fact_Paie"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "453ebb2f-3ea1-443a-a1c3-9b23c96e0b55",
+        "fromTable": "gold Fact_Paie",
+        "fromColumn": "departement_sk",
+        "toTable": "gold Dim_Departement",
+        "toColumn": "departement_sk"
+      },
+      {
+        "name": "3d9ec271-2ce1-4441-a986-80b4dfc274df",
+        "fromTable": "gold Dim_Employe",
+        "fromColumn": "poste_sk",
+        "toTable": "gold Dim_Poste",
+        "toColumn": "poste_sk"
+      },
+      {
+        "name": "f60a1c07-3cb8-4bb3-9cf7-31edd42ff257",
+        "fromTable": "gold Fact_Absences",
+        "fromColumn": "employe_sk",
+        "toTable": "gold Dim_Employe",
+        "toColumn": "employe_sk",
+        "isActive": false
+      },
+      {
+        "name": "d606fce6-a591-4704-9641-ae2a448462ef",
+        "fromTable": "gold Fact_Evaluations",
+        "fromColumn": "employe_sk",
+        "toTable": "gold Dim_Employe",
+        "toColumn": "employe_sk",
+        "isActive": false
+      },
+      {
+        "name": "3905afeb-6676-49a4-9feb-036b6cdf7a06",
+        "fromTable": "gold Fact_Paie",
+        "fromColumn": "employe_sk",
+        "toTable": "gold Dim_Employe",
+        "toColumn": "employe_sk",
+        "isActive": false
+      },
+      {
+        "name": "623d884e-5f9a-426e-ae2f-a59c663aa845",
+        "fromTable": "gold Fact_Paie",
+        "fromColumn": "poste_sk",
+        "toTable": "gold Dim_Poste",
+        "toColumn": "poste_sk"
+      },
+      {
+        "name": "bd76020b-0d9d-4405-b751-24bc219b6189",
+        "fromTable": "gold Fact_Absences",
+        "fromColumn": "temps_sk_debut",
+        "toTable": "gold Dim_Temps",
+        "toColumn": "temps_sk"
+      },
+      {
+        "name": "f52e9a74-9151-4566-90bd-410ffcd204d2",
+        "fromTable": "gold Fact_Paie",
+        "fromColumn": "temps_sk",
+        "toTable": "gold Dim_Temps",
+        "toColumn": "temps_sk"
+      },
+      {
+        "name": "1bdedc9c-befb-4e0f-9afa-70fc4a13e8d5",
+        "fromTable": "gold Dim_Employe",
+        "fromColumn": "departement_sk",
+        "toTable": "gold Dim_Departement",
+        "toColumn": "departement_sk"
+      },
+      {
+        "name": "73ee0fc3-2608-4e08-ac7f-0a95a1e213c0",
+        "fromTable": "gold Fact_Absences",
+        "fromColumn": "departement_sk",
+        "toTable": "gold Dim_Departement",
+        "toColumn": "departement_sk"
+      },
+      {
+        "name": "bec074a1-83f9-43f2-8380-a682a42fc2a5",
+        "fromTable": "gold Fact_Evaluations",
+        "fromColumn": "departement_sk",
+        "toTable": "gold Dim_Departement",
+        "toColumn": "departement_sk"
+      },
+      {
+        "name": "ec240198-0b2a-4242-b4c0-58412a0e4ef8",
+        "fromTable": "gold Dim_Employe",
+        "fromColumn": "ville_sk",
+        "toTable": "gold Dim_Ville",
+        "toColumn": "ville_sk"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "500"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

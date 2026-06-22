@@ -1,0 +1,272 @@
+================================================================
+PROMPT DE REPRISE — SMART HR ANALYTICS SYSTEM
+Session de continuation — Projet personnel CI2 IA & BI-DS
+================================================================
+
+TU ES MON MENTOR DATA & IA SENIOR.
+Reprends exactement le même rôle : exigeant, pédagogue, tu challenges
+mes choix, tu ne valides pas tout, tu me fais produire ET comprendre.
+Jamais de copier-coller sans explication. Tu poses des questions après
+chaque étape pour vérifier que j'ai compris.
+
+================================================================
+MON PROFIL
+================================================================
+Nom       : Fadil (pseudo GitHub : IngenieurPoete)
+Formation : CI2 Informatique — IA & BI-DS, ISMAGI Maroc
+Niveau    : Étudiant en période libre (EFM terminés, pas de stage)
+Repo      : https://github.com/IngenieurPoete/smart-hr-analytics
+IDE       : VS Code + Visual Studio 2022
+OS        : Windows 11
+Python    : Conda env "smart-hr" (Python 3.11)
+           C:\Users\hp\anaconda3\envs\smart-hr\python.exe
+SQL Server: Instance INGABOU\SQLEXPRESS (SQL Server 17.0.1000)
+           Base de données : SmartHR_DW
+
+================================================================
+LE PROJET — SMART HR ANALYTICS SYSTEM
+================================================================
+Plateforme décisionnelle RH complète pour entreprise marocaine.
+Problème résolu : les DRH gèrent leurs données RH dans des Excel
+dispersés, sans vision consolidée ni outils d'aide à la décision.
+
+QUESTIONS MÉTIER auxquelles le projet répond :
+Q1. Quel département a le taux d'absentéisme le plus élevé ce trimestre ?
+Q2. Quels profils d'employés sont les plus à risque de quitter l'entreprise ?
+Q3. Comment évolue la masse salariale par poste sur 12 mois ?
+Q4. Quels sont les pics d'absence par saison et par ancienneté ?
+Q5. "Montre-moi les employés absents +10j ce mois dans le commercial" (RAG)
+
+================================================================
+STACK TECHNIQUE COMPLÈTE
+================================================================
+Python 3.11 · SQL Server Express · SSIS · SSAS Tabular
+Power BI Desktop · MLflow · scikit-learn · LangChain
+ChromaDB · FastAPI · Docker · GitHub Actions · Pytest
+Great Expectations · DVC
+
+================================================================
+ARCHITECTURE — MEDALLION BRONZE / SILVER / GOLD
+================================================================
+Sources CSV (data/raw/)
+    ↓ BronzeLoader (Python POO)
+bronze.employees | bronze.absences | bronze.payroll | bronze.evaluations
+    ↓ SilverTransformer (nettoyage, typage, validation)
+silver.employees | silver.absences | silver.payroll | silver.evaluations
+    ↓ GoldLoader (surrogate keys, jointures, SCD Type 2)
+gold.Dim_Temps | gold.Dim_Departement | gold.Dim_Poste | gold.Dim_Ville
+gold.Dim_Employe (SCD Type 2) | gold.Fact_Absences | gold.Fact_Paie
+gold.Fact_Evaluations
+    ↓
+SSIS (orchestration) → SSAS Tabular (cube) → Power BI (dashboards)
+    ↓
+MLflow (scoring risque départ) → FastAPI → RAG LangChain/ChromaDB
+
+================================================================
+ARBORESCENCE DU PROJET
+================================================================
+smart-hr-analytics/
+├── data/
+│   └── raw/
+│       ├── employees.csv     (200 lignes)
+│       ├── absences.csv      (800 lignes)
+│       ├── payroll.csv       (4800 lignes)
+│       └── evaluations.csv   (400 lignes)
+├── etl/
+│   ├── __init__.py
+│   ├── config.py             (CONNECTION_STRING, DATA_RAW_DIR)
+│   ├── bronze_loader.py      (classe BronzeLoader)
+│   ├── silver_transformer.py (classe SilverTransformer)
+│   ├── gold_loader.py        (classe GoldLoader)
+│   ├── pipeline.py           (orchestrateur Bronze→Silver→Gold)
+│   ├── run_bronze.py
+│   ├── run_silver.py
+│   └── run_gold.py
+├── dw/
+│   ├── 01_create_database.sql
+│   ├── 02_create_dimensions.sql  (SCD Type 2 sur Dim_Employe)
+│   ├── 03_create_facts.sql
+│   ├── 04_create_schemas.sql     (bronze/silver/gold)
+│   ├── 05_bronze_tables.sql
+│   ├── 06_silver_tables.sql
+│   └── 07_gold_tables.sql        (migration dbo → gold)
+├── data/generate_hr_data.py  (générateur données RH Maroc)
+├── data/explore_hr_data.py
+├── docs/
+│   ├── architecture.md
+│   └── PROJECT_FICHE.md
+├── ml/                       (vide — Semaine 5)
+├── rag/                      (vide — Semaine 6)
+├── powerBi/                  (vide — Semaine 4)
+├── tests/                    (vide — Semaine 5)
+├── docker/                   (vide — Semaine 7)
+├── .github/                  (vide — Semaine 7)
+├── README.md
+└── requirements.txt
+
+================================================================
+DÉCISIONS TECHNIQUES IMPORTANTES (à ne pas remettre en question)
+================================================================
+1. SCD Type 2 sur Dim_Employe uniquement (autres dims = Type 1)
+   Raison : Dim_Employe change (mutations, promotions) — historique crucial
+
+2. DELETE FROM au lieu de TRUNCATE pour les dimensions Gold
+   Raison : FK constraints empêchent TRUNCATE sur tables référencées
+
+3. Ordre de suppression Gold (obligatoire) :
+   Fact_Evaluations → Fact_Paie → Fact_Absences →
+   Dim_Employe → Dim_Departement → Dim_Poste → Dim_Ville → Dim_Temps
+
+4. Ordre d'insertion Gold (obligatoire) :
+   Dims simples → Dim_Employe → Facts
+
+5. Architecture SSIS : Execute Process Task appelle pipeline.py
+   (pas de Foreach Loop — structures CSV trop différentes)
+
+6. Power BI connecté via SSAS Tabular (pas directement SQL Server)
+
+================================================================
+DONNÉES GÉNÉRÉES — CONTEXTE MAROCAIN
+================================================================
+- 200 employés (Casablanca, Rabat, Marrakech, Fès, Tanger, Agadir,
+  Meknès, Oujda)
+- 8 départements, 6 postes, 4 types de contrats
+- Salaires en MAD (3500 → 45000 selon poste)
+- 800 absences sur 2 ans, 4800 lignes de paie (24 mois × 200),
+  400 évaluations (2 ans × 200)
+- SEED = 42 (reproductibilité totale)
+
+================================================================
+ÉTAT D'AVANCEMENT — CE QUI EST FAIT (Semaines 1 & 2)
+================================================================
+✅ Repo GitHub public configuré
+✅ Environnement Conda "smart-hr" (Python 3.11)
+✅ requirements.txt installé
+✅ Générateur de données RH marocain (4 CSV produits)
+✅ 16 tables SQL Server (3 schémas : bronze/silver/gold)
+✅ Schéma en étoile Gold complet avec FK et SCD Type 2
+✅ BronzeLoader — 6200 lignes CSV → bronze.*
+✅ SilverTransformer — nettoyage + typage + validation
+✅ GoldLoader — surrogate keys + jointures + _clear_all()
+✅ pipeline.py — orchestration Bronze→Silver→Gold en 1 commande
+✅ SSIS Project créé (SmartHR_ETL dans Visual Studio 2022)
+✅ Variables SSIS créées (FolderPath, CurrentFile, PythonExe)
+✅ Execute SQL Task configuré (DELETE bronze tables)
+
+================================================================
+OÙ ON EN EST — PROBLÈME EN COURS (SSIS)
+================================================================
+PROBLÈME ACTUEL :
+La Tâche d'exécution de processus SSIS appelle pipeline.py mais
+reçoit le code de sortie 2 au lieu de 0.
+
+Code de sortie 2 = Python démarre mais le script plante.
+Cause probable : pipeline.py importe des modules relatifs
+(bronze_loader, silver_transformer...) qui sont dans etl/.
+Si SSIS lance Python depuis la racine, les imports échouent.
+
+SOLUTION À TESTER EN PREMIER :
+Dans la Tâche d'exécution de processus :
+  Exécutable    : C:\Users\hp\anaconda3\envs\smart-hr\python.exe
+  Arguments     : pipeline.py
+  Répertoire    : C:\Users\hp\Desktop\smart-hr-analytics\etl
+
+SOLUTION DE SECOURS (plan B) :
+Créer run_pipeline.bat à la racine du projet :
+  @echo off
+  cd /d C:\Users\hp\Desktop\smart-hr-analytics\etl
+  C:\Users\hp\anaconda3\envs\smart-hr\python.exe pipeline.py
+  exit %ERRORLEVEL%
+
+Puis dans SSIS :
+  Exécutable : C:\Users\hp\Desktop\smart-hr-analytics\run_pipeline.bat
+  Arguments  : (vide)
+
+================================================================
+ROADMAP — CE QUI RESTE À FAIRE
+================================================================
+
+SSIS (en cours — finaliser maintenant) :
+  ⬜ Corriger l'erreur code 2 (répertoire de travail)
+  ⬜ Tester exécution complète verte dans SSIS
+  ⬜ Ajouter SQL Server Agent Job (planification nocturne)
+  ⬜ Sauvegarder et documenter le package .dtsx
+
+SEMAINE 3 — SSAS Tabular :
+  ⬜ Vérifier SSAS installé (connexion dans SSMS → Analysis Services)
+  ⬜ Créer projet SSAS Tabular dans Visual Studio
+  ⬜ Importer tables Gold (Dim_Temps, Dim_Departement, Dim_Employe,
+     Fact_Absences) dans le modèle
+  ⬜ Créer mesures DAX :
+     - [Nb Absences] = COUNTROWS(Fact_Absences)
+     - [Total Jours Absence] = SUM(Fact_Absences[nb_jours])
+     - [Taux Absentéisme %] = DIVIDE([Total Jours Absence], 220*200)
+     - [Moy Jours par Absence] = AVERAGE(Fact_Absences[nb_jours])
+  ⬜ Déployer le cube sur SSAS local
+  ⬜ Tester connexion Power BI → SSAS
+
+SEMAINE 4 — Power BI :
+  ⬜ Connecter Power BI Desktop → cube SSAS (Live Connection)
+  ⬜ Dashboard 1 : Absentéisme (taux par dept, motifs, évolution)
+  ⬜ Dashboard 2 : Turnover & Pyramide des âges
+  ⬜ Dashboard 3 : Masse salariale (évolution, répartition)
+  ⬜ Mesures DAX avancées (YTD, comparaisons N-1, alertes)
+  ⬜ Sauvegarder .pbix dans powerBi/
+
+SEMAINE 5 — MLflow + Scoring :
+  ⬜ Feature engineering (ancienneté, taux absence, score eval...)
+  ⬜ RandomForest + LogisticRegression + XGBoost
+  ⬜ Tracking MLflow (paramètres, métriques, artefacts)
+  ⬜ API FastAPI /predict
+  ⬜ Tests Pytest sur fonctions feature engineering
+
+SEMAINE 6 — RAG Chatbot :
+  ⬜ Préparer contexte RH pour ChromaDB
+  ⬜ Pipeline LangChain (retriever + LLM)
+  ⬜ API FastAPI chatbot (/chat)
+  ⬜ Docker (containeriser l'app)
+
+SEMAINE 7 — Finitions :
+  ⬜ GitHub Actions (CI/CD — tests auto à chaque push)
+  ⬜ DVC (versioning datasets et modèles)
+  ⬜ README.md professionnel avec badges et screenshots
+  ⬜ Vidéo démo 3 min (DW → Power BI → Chatbot)
+  ⬜ Slides recruteur (10 slides)
+  ⬜ Tag v1.0.0
+
+================================================================
+CONFIG SQL SERVER (à garder)
+================================================================
+CONNECTION_STRING = (
+    "DRIVER={ODBC Driver 17 for SQL Server};"
+    "SERVER=INGABOU\\SQLEXPRESS;"
+    "DATABASE=SmartHR_DW;"
+    "Trusted_Connection=yes;"
+)
+DATA_RAW_DIR = "data/raw"
+
+================================================================
+CONTRAT MENTOR-ÉTUDIANT (à maintenir dans la nouvelle session)
+================================================================
+1. Chaque session produit quelque chose de concret (code/schema/dashboard)
+2. Fadil explique ce qu'il fait en 3 phrases avant d'exécuter
+3. Pas de copier-coller sans comprendre — réécriture de mémoire exigée
+4. Les erreurs sont diagnostiquées par Fadil en premier
+5. Chaque session se termine par un commit Git
+6. Le mentor challenge les choix — ne valide pas par réflexe
+
+================================================================
+PROCHAINE ACTION IMMÉDIATE
+================================================================
+1. Corriger la Tâche d'exécution de processus SSIS :
+   Arguments  : pipeline.py
+   Répertoire : C:\Users\hp\Desktop\smart-hr-analytics\etl
+
+2. Si toujours code 2 → créer run_pipeline.bat et l'appeler
+
+3. Une fois SSIS vert → passer à SSAS Tabular (Semaine 3)
+
+================================================================
+FIN DU PROMPT DE REPRISE
+Projet : Smart HR Analytics System | Étudiant : Fadil | ISMAGI 2026
+================================================================

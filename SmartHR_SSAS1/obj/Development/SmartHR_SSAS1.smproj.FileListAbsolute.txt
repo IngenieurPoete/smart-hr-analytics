@@ -1,0 +1,8 @@
+C:\Users\hp\Desktop\smart-hr-analytics\SmartHR_SSAS1\bin\Model.asdatabase
+C:\Users\hp\Desktop\smart-hr-analytics\SmartHR_SSAS1\bin\Model.deploymenttargets
+C:\Users\hp\Desktop\smart-hr-analytics\SmartHR_SSAS1\bin\Model.deploymentoptions
+C:\Users\hp\Desktop\smart-hr-analytics\SmartHR_SSAS1\obj\Development\SmartHR_SSAS1.smproj.AssemblyReference.cache
+C:\Users\hp\Desktop\smart-hr-analytics\SmartHR_SSAS1\obj\Development\SmartHR_SSAS1.smproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\smart-hr-analytics\SmartHR_SSAS1\obj\Development\Model.asdatabase
+C:\Users\hp\Desktop\smart-hr-analytics\SmartHR_SSAS1\obj\Development\Model.deploymentoptions
+C:\Users\hp\Desktop\smart-hr-analytics\SmartHR_SSAS1\obj\Development\Model.deploymenttargets

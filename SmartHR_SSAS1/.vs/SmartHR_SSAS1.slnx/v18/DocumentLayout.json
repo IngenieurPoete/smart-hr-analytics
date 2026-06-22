@@ -1,0 +1,48 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\smart-hr-analytics\\SmartHR_SSAS1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8CE414BB-95B2-4C99-9E03-51BA72086E22}|SmartHR_SSAS1.smproj|C:\\Users\\hp\\Desktop\\smart-hr-analytics\\SmartHR_SSAS1\\Model.bim||{9EE154FA-5389-414A-9FA1-1D9F0221267D}",
+      "RelativeMoniker": "D:0:0:{8CE414BB-95B2-4C99-9E03-51BA72086E22}|SmartHR_SSAS1.smproj|solutionrelative:Model.bim||{9EE154FA-5389-414A-9FA1-1D9F0221267D}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Model.bim",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\smart-hr-analytics\\SmartHR_SSAS1\\Model.bim",
+              "RelativeDocumentMoniker": "Model.bim",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\smart-hr-analytics\\SmartHR_SSAS1\\Model.bim",
+              "RelativeToolTip": "Model.bim",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-22T17:54:00.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
